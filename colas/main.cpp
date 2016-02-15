@@ -7,10 +7,13 @@ using namespace std;
 
 Cola<int> cola1;
 Cola<int> cola2;
+Cola<double> cola3;
 Cola<int> aux;
 Cola<int> temp;
 Cola<int> colaunion;
 int ele;
+double valor;
+double resultado;
 char pri;
 
 
@@ -76,6 +79,27 @@ void unionDeColas()
 			}
 	}
 }
+void guardarFactorialIColasRutina(double valor){
+
+	for(int i=valor;i>0;i--){
+		resultado = cola3.factorialIColas(valor);
+		cola3.agregar(resultado);
+		valor--;
+	}
+	cout<<resultado<<endl;
+	cola3.imprimir();
+}
+void guardarFactorialRColasRutina(double valor){
+	for(int i=valor;i>0;i--){
+		resultado = cola3.factorialRColas(valor);
+		cola3.agregar(resultado);
+		valor--;
+	}
+	cout<<resultado<<endl;
+	cola3.imprimir();
+}
+
+
 
 
 
@@ -104,6 +128,8 @@ int main()
     	        cout << "\t13 .- Eliminar de la primera cola que no aparezcan en la 2da Cola"<<endl;
     	        cout << "\t14 .- Eliminar la mitad superior a un promedio"<<endl;
     	        cout << "\t15 .- eliminar Valores de Cola Uno Multiplos De Valores en Cola Dos"<<endl;
+    	        cout << "\t16 .- Factorial Iterativo"<<endl;
+    	        cout << "\t17 .- Factorial Recursivo"<<endl;
     	        cout << "\t0 .- Salir" << endl << endl;
     	        cout << "Elije una opcion: ";
 
@@ -171,6 +197,22 @@ int main()
 	eliminarValoresdeColaUnoMultiplosDeValoresenColaDos();
 	temp.imprimir();
 			break;
+	case 16:
+		cout<<"Introduzca el numero a calcular el factorial Iterativo"<<endl;
+		cin >> valor;
+		guardarFactorialIColasRutina(valor);
+		resultado=cola3.factorialIColas(valor);
+		cout<<resultado<<endl<<endl;
+
+		break;
+	case 17:
+		cout<<"Introduzca el numero a calcular el factorial Recursivo"<<endl;
+		cin >> valor;
+		guardarFactorialRColasRutina(valor);
+		resultado=cola3.factorialRColas(valor);
+		cout<<resultado<<endl<<endl;
+
+		break;
 	}
     }while(opc!=0);
 

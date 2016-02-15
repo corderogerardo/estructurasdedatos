@@ -496,6 +496,49 @@ void Cola<T>::eliminar_mayores_a(T data_)
     }
 }
 
+template<typename T>
+double Cola<T>::factorialIColas(double valor){
+	double resultado=1;
+	while(valor>1){
+		resultado=resultado*valor;
+		valor= valor -1;
+	}
+
+	return (resultado);
+}
+template<typename T>
+void Cola<T>::guardarFactorialIColas(double valor){
+	double result;
+	while(valor<1){
+		result = factorialIColas(valor);
+		agregar(0);
+		agregar(result);
+		valor--;
+	}
+	imprimir();
+}
+template<typename T>
+double Cola<T>::factorialRColas(double n){
+	if(n < 1){
+		return 0;
+	}
+	else if(n==1){
+		return 1;
+	}else{
+		return (n*factorialRColas(n-1));
+	}
+}//Graciano
+template<typename T>
+void Cola<T>::guardarFactorialRColas(double valor){
+	while(valor<1){
+		double result = factorialRColas(valor);
+		agregar(result);
+		valor--;
+	}
+	imprimir();
+}
+
+
 
 template<typename T>
 Cola<T>::~Cola() {

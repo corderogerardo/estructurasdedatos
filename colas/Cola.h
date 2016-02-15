@@ -39,6 +39,12 @@ public:
 	  void EliminarMitadInferior();
 	  void eliminarMitadSuperiorAlPromedio();
 
+	  double factorialIColas(double valor);
+	  double factorialRColas(double valor);
+
+	  void guardarFactorialIColas(double valor);
+	  void guardarFactorialRColas(double valor);
+
 
 	 int mayor();
 	 int menor();
