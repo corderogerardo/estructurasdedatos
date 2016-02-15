@@ -3,6 +3,7 @@
  *
  *  Created on: 14 de feb. de 2016
  *      Author: gerardo
+ *      http://corderogerardo.me/blog/estructuras-de-datos
  */
 
 #include "Node.h"
