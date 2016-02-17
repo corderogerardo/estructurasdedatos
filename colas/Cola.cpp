@@ -1,11 +1,13 @@
 /*
  * Cola.cpp
+
  *
  *  Created on: 25/5/2015
  *      Author: Gerardo Cordero_2
  */
 
 #include "Cola.h"
+
 using namespace std;
 
 template<typename T>
@@ -222,12 +224,22 @@ int Cola<T>::cuantos_hay()
 template<typename T>
 void Cola<T>::imprimir()
 {
+	int val= cuantos_hay();
     Node<T> *temp = m_inicio;
     if (!m_inicio) {
-        cout << "La Lista est� vac�a " << endl;
+        cout << "La cola esta vacia " << endl;
     } else {
         while (temp!=NULL) {
-           temp->imprimir();
+         		cout<<"Factorial de ";
+        		cout<<val;
+        		cout<<" es: ";
+        		cout<<val;
+        		cout<<" x ";
+        		cout<<val-1;
+        		cout<<"!= ";
+        		temp->imprimir();
+        		val--;
+
             if (temp->obtenerSiguiente()==NULL)
             	{cout << "NULL";}
             temp = temp->obtenerSiguiente();
@@ -511,7 +523,6 @@ void Cola<T>::guardarFactorialIColas(double valor){
 	double result;
 	while(valor<1){
 		result = factorialIColas(valor);
-		agregar(0);
 		agregar(result);
 		valor--;
 	}
@@ -530,7 +541,7 @@ double Cola<T>::factorialRColas(double n){
 }//Graciano
 template<typename T>
 void Cola<T>::guardarFactorialRColas(double valor){
-	while(valor<1){
+	for(int i=valor;i>0;i--){
 		double result = factorialRColas(valor);
 		agregar(result);
 		valor--;

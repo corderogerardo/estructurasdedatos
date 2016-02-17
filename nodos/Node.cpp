@@ -63,7 +63,7 @@ void Node<T>::detele_all(){
 //Imprimir un nodo
 template<typename T>
 void Node<T>::imprimir(){
-	cout << obtenerDato() << "->";
+	cout << obtenerDato() << "->" <<endl;
 }
 //Destructor
 template<typename T>

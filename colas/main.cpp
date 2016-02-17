@@ -1,4 +1,6 @@
 #include <iostream>
+#include <sstream>
+#include <string>
 
 #include "Cola.cpp"
 
@@ -8,6 +10,7 @@ using namespace std;
 Cola<int> cola1;
 Cola<int> cola2;
 Cola<double> cola3;
+Cola<double> cola4;
 Cola<int> aux;
 Cola<int> temp;
 Cola<int> colaunion;
@@ -80,23 +83,22 @@ void unionDeColas()
 	}
 }
 void guardarFactorialIColasRutina(double valor){
+	double respaldoValor;
 
 	for(int i=valor;i>0;i--){
 		resultado = cola3.factorialIColas(valor);
 		cola3.agregar(resultado);
 		valor--;
 	}
-	cout<<resultado<<endl;
 	cola3.imprimir();
 }
 void guardarFactorialRColasRutina(double valor){
 	for(int i=valor;i>0;i--){
-		resultado = cola3.factorialRColas(valor);
-		cola3.agregar(resultado);
+		resultado = cola4.factorialRColas(valor);
+		cola4.agregar(resultado);
 		valor--;
 	}
-	cout<<resultado<<endl;
-	cola3.imprimir();
+	cola4.imprimir();
 }
 
 
@@ -209,7 +211,7 @@ int main()
 		cout<<"Introduzca el numero a calcular el factorial Recursivo"<<endl;
 		cin >> valor;
 		guardarFactorialRColasRutina(valor);
-		resultado=cola3.factorialRColas(valor);
+		resultado=cola4.factorialRColas(valor);
 		cout<<resultado<<endl<<endl;
 
 		break;
