@@ -17,6 +17,6 @@ class Nodo  {
        Nodo<Tipo>* ObtDer();
        };
 
-#include "Nodo.cpp"
+#include "../arbol/Nodo.cpp"
 #endif
 
