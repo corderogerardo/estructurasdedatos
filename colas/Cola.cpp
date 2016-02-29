@@ -4,6 +4,8 @@
  *
  *  Created on: 25/5/2015
  *      Author: Gerardo Cordero_2
+ *      http://corderogerardo.me/blog/estructuras-de-datos
+ *
  */
 
 #include "Cola.h"
