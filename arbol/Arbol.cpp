@@ -1,18 +1,12 @@
-/*
- * Arbol.cpp
- *
- *  Created on: 27 de feb. de 2016
- *      Author: gerardo
- */
 #include <stdlib.h>    // Para utilizar NULL
+
 
 /* Funcion Miembro que Inicializa el Arbol Binario a traves del Apuntador Raiz*/
 template<class Tipo>
-Arbol<Tipo>::Arbol() {
-	// TODO Auto-generated constructor stub
-	raiz=NULL;
+Arbol<Tipo>::Arbol()
+{
+  raiz = NULL;
 }
-
 
 /* Miembro Constructor Copia, que crea e inicializa un nuevo objeto,        */
 /* con la informacion del objeto Entrada                                    */
@@ -237,16 +231,3 @@ Nodo<Tipo> *Arbol<Tipo>::CopiaArbol(Nodo<Tipo> *tree)
       }
       else return NULL;
 }
-
-/* Miembro Constructor Copia, que crea e inicializa un nuevo objeto,        */
-/* con la informacion del objeto Entrada                                    */
-template<class Tipo>
-Arbol<Tipo>::Arbol(Arbol<Tipo> &entrada)
-{
-  raiz = CopiaArbol(entrada.ObtRaiz());
-}
-template<class Tipo>
-Arbol<Tipo>::~Arbol() {
-	// TODO Auto-generated destructor stub
-}
-

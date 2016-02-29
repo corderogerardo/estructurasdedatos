@@ -1,42 +1,22 @@
-/*
- * Nodo.h
- *
- *  Created on: 27 de feb. de 2016
- *      Author: gerardo
- */
+#ifndef Nodo_H
+#define Nodo_H
 
-#ifndef NODO_H_
-#define NODO_H_
+template <class Tipo>
+class Nodo  {
 
-#include <iostream>
-
-using namespace std;
-
-template<class Tipo>
-class Nodo {
-private:
-	Tipo info;
-	Nodo<Tipo>* izq;
-	Nodo<Tipo>* der;
-public:
-	void AsigInfo(Tipo in);
-	Tipo ObtInfo();
-
-	void AsigIzq(Nodo<Tipo>*p);
-	Nodo<Tipo>* ObtIzq();
-
-	void AsigDer(Nodo<Tipo>*p);
-	Nodo<Tipo>*ObtDer();
-
-	//Constructor
-	Nodo();
-	//Sobrecarga de Constructor
-	Nodo(Tipo);
-	//Destructor
-	~Nodo();
-
-	void imprimir();
-};
+   private:
+       Tipo info;
+       Nodo<Tipo>* izq;
+       Nodo<Tipo>* der;
+   public:
+       void AsigInfo(Tipo in);
+       Tipo ObtInfo();
+       void AsigIzq(Nodo<Tipo>* p);
+       Nodo<Tipo>* ObtIzq();
+       void AsigDer(Nodo<Tipo>* p);
+       Nodo<Tipo>* ObtDer();
+       };
 
 #include "Nodo.cpp"
-#endif /* NODO_H_ */
+#endif
+

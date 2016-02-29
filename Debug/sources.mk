@@ -25,6 +25,5 @@ C_UPPER_DEPS :=
 SUBDIRS := \
 arbol \
 colas \
-nodoprofesor \
-nodos \
+nodo \
 

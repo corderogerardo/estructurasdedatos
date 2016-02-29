@@ -1,11 +1,8 @@
-/*
- * Nodo.cpp
- *
- *  Created on: 27 de feb. de 2016
- *      Author: gerardo
- */
 
-
+template <class Tipo>
+void Nodo<Tipo>::AsigInfo(Tipo in){
+     info=in;
+     };
 
 template <class Tipo>
 Tipo Nodo<Tipo>::ObtInfo(){
@@ -32,14 +29,3 @@ Nodo<Tipo>* Nodo<Tipo>::ObtDer(){
      return der;
      };
 
-//Imprimir un nodo
-template<class Tipo>
-void Nodo<Tipo>::imprimir(){
-	cout << ObtInfo() << "->" <<endl;
-}
-
-//Destructor
-template<class Tipo>
-Nodo<Tipo>::~Nodo() {
-
-}
