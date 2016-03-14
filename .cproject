@@ -48,8 +48,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="arbol|colasrecursivas|listasenlazadas|colas|recursividad|nodoprofesor|pilas|nodos|arbolesbinarios" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="arbol"/>
+						<entry excluding="colasrecursivas|arbolBB|listasenlazadas|colas|recursividad|nodoprofesor|pilas|nodos|arbolesbinarios" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="arbolBB"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="colas"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="colasrecursivas"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="listasenlazadas"/>
@@ -102,8 +102,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="arbol|nodoprofesor|nodos|recursividad|arbolesbinarios|colasrecursivas|listasenlazadas|colas|pilas" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="arbol"/>
+						<entry excluding="colasrecursivas|arbolBB|listasenlazadas|colas|recursividad|nodoprofesor|pilas|nodos|arbolesbinarios" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="arbolBB"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="colas"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="colasrecursivas"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="listasenlazadas"/>

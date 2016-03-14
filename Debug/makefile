@@ -9,7 +9,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include colas/subdir.mk
--include arbol/subdir.mk
+-include arbolBB/subdir.mk
+-include Nodos/subdir.mk
 -include subdir.mk
 -include objects.mk
 

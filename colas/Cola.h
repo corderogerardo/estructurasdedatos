@@ -12,7 +12,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include "../nodos/Node.cpp"
+#include "../Nodos/Node.cpp"
 
 using namespace std;
 

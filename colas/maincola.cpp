@@ -113,7 +113,7 @@ void guardarFactorialRColasRutina(double valor){
 
 
 
-int main()
+int maincola()
 {
     int pos;
 	int opc;
