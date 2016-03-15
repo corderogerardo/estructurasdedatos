@@ -25,8 +25,9 @@ void cargarBDesdeTxtR(ArbolBB<int>& arbol);
 void inOrden(ArbolBB<int> &arbol, Apuntador raiz);
 void preOrden(ArbolBB<int> &arbol, Apuntador raiz);
 void postOrden(ArbolBB<int> &arbol, Apuntador raiz);
-void CombinarpreOrden(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz);
+void CombinarinOrden(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz);
 void CombinarRepetido(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz);
+void Balancear(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz);
 
 
 int main(int argc, char *argv[])
@@ -86,13 +87,13 @@ int main(int argc, char *argv[])
 	case 6:
 			cout << "Combinar Arbol A + B, Imprimir: " << endl;
 			arbolab = arbola;
-			CombinarpreOrden(arbolb,arbolab,arbolb.ObtRaiz());
+			CombinarinOrden(arbolb,arbolab,arbolb.ObtRaiz());
 					inOrden(arbolab,arbolab.ObtRaiz());
 					break;
 	case 7:
 			cout << "Combinar Arbol B + A, Imprimir: " << endl;
 			arbolba = arbolb;
-				CombinarpreOrden(arbola,arbolba,arbola.ObtRaiz());
+			CombinarinOrden(arbola,arbolba,arbola.ObtRaiz());
 				inOrden(arbolba,arbolba.ObtRaiz());
 					break;
 	case 8:
@@ -103,7 +104,7 @@ int main(int argc, char *argv[])
 					cargarBDesdeTxtR(arbolb);
 					CombinarRepetido(arbola,arbolc,arbola.ObtRaiz());
 					CombinarRepetido(arbolb,arbolc,arbolb.ObtRaiz());
-					inOrden(arbolc,arbolc.ObtRaiz());
+					preOrden(arbolc,arbolc.ObtRaiz());
 					break;
 	}
     }while(opc!=0);
@@ -196,21 +197,22 @@ void preOrden(ArbolBB<int> &arbol, Apuntador raiz){
 
 		     }
 }
-void CombinarpreOrden(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz){
+void CombinarinOrden(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz){
 	int simbolo;
 	if(raiz!= NULL){
+			CombinarinOrden(arbol,arboldos,raiz->ObtIzq());
 			simbolo=raiz->ObtInfo();
 		    arboldos.InsertarRecursivo(arboldos.ObtRaiz(),simbolo);
-		    CombinarpreOrden(arbol,arboldos,raiz->ObtIzq());
-		    CombinarpreOrden(arbol,arboldos,raiz->ObtDer());
+		    CombinarinOrden(arbol,arboldos,raiz->ObtDer());
 		     }
 }
 void CombinarRepetido(ArbolBB<int> &arbol,ArbolBB<int> &arboldos, Apuntador raiz){
 	int simbolo;
 	if(raiz!= NULL){
+		  	CombinarRepetido(arbol,arboldos,raiz->ObtIzq());
 			simbolo=raiz->ObtInfo();
 		    arboldos.InsertarRecursivoR(arboldos.ObtRaiz(),simbolo);
-		    CombinarRepetido(arbol,arboldos,raiz->ObtIzq());
+
 		    CombinarRepetido(arbol,arboldos,raiz->ObtDer());
 		     }
 }
