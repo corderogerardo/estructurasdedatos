@@ -106,6 +106,38 @@ bool ArbolBB<Tipo>::InsertarRecursivo(Nodo<Tipo>* p, Tipo valor){
           }
      };
 
+//InsertarRecursivo, este metodo no permite actualizar la raiz!:
+template <class Tipo>
+bool ArbolBB<Tipo>::InsertarRecursivoR(Nodo<Tipo>* p, Tipo valor){
+
+     Tipo auxiliar;
+
+     Nodo<Tipo>* nuevo;
+     if (Arbol<Tipo>::ObtRaiz()==NULL)
+      {
+        nuevo=this->CrearNodo(valor);
+	    this->AsigRaiz(nuevo);
+	    return true;
+      }
+     else {
+          auxiliar = p->ObtInfo();
+          if (valor < auxiliar) {
+               if (p->ObtIzq()==NULL) {
+                   this->InsIzquierdo(p,valor);
+                   return true;
+                   }
+               else InsertarRecursivoR(p->ObtIzq(),valor);
+               }
+          else
+              if (p->ObtDer()==NULL) {
+                 this->InsDerecho(p,valor);
+                 return true;
+                 }
+              else InsertarRecursivoR(p->ObtDer(),valor);
+          }
+     };
+
+
 template <class Tipo>
 bool ArbolBB<Tipo>::Eliminar(Tipo &valor)
 {

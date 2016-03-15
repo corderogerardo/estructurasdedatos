@@ -12,6 +12,7 @@ public:
    Nodo<Tipo>* BuscarRecursivo(Nodo<Tipo>* p, Tipo valor);
    bool Insertar(Tipo valor); //Hay que poner a p de salida para que se actualice el valor de p al comienzo
    bool InsertarRecursivo(Nodo<Tipo>* p, Tipo valor);
+   bool InsertarRecursivoR(Nodo<Tipo>* p, Tipo valor);
    bool Eliminar(Tipo &valor);
 };
 
